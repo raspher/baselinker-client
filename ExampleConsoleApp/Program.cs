@@ -1,6 +1,4 @@
-﻿using System;
-using System.Net.Http;
-using BaseLinkerApi;
+﻿using BaseLinkerApi;
 using Requests = BaseLinkerApi.Requests;
 
 var token = Environment.GetEnvironmentVariable("BASELINKER_TOKEN");

@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using BaseLinkerApi.Common;
 
 namespace BaseLinkerApi.Requests.ProductCatalog;
 
