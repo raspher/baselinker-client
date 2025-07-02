@@ -13,7 +13,7 @@ public static class ServiceCollectionExtensions
     public static void AddBaseLinker(this IServiceCollection services, Action<BaseLinkerOptions> configure)
     {
         services.AddOptions<BaseLinkerOptions>().Configure(configure);
-        services.AddHttpClient<IBaseLinkerApiClient, InjectableBaseLinkerApiClient>();
+        services.AddHttpClient<IBaseApiClient, InjectableBaseApiClient>();
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ public static class ServiceCollectionExtensions
     {
         if (token == null) throw new ArgumentNullException(nameof(token));
         services.AddOptions<BaseLinkerOptions>().Configure(c => c.Token = token);
-        services.AddHttpClient<IBaseLinkerApiClient, InjectableBaseLinkerApiClient>();
+        services.AddHttpClient<IBaseApiClient, InjectableBaseApiClient>();
     }
     
 }

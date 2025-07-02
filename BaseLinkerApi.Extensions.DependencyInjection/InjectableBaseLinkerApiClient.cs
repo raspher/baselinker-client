@@ -7,12 +7,12 @@ using Microsoft.Extensions.Options;
 
 namespace BaseLinkerApi.Extensions.DependencyInjection;
 
-internal class InjectableBaseLinkerApiClient : IBaseLinkerApiClient
+internal class InjectableBaseApiClient : IBaseApiClient
 {
-    private readonly BaseLinkerApiClient _client;
+    private readonly BaseApiClient _client;
     private static FixedWindowRateLimiter? _rateLimiter;
 
-    public InjectableBaseLinkerApiClient(HttpClient httpClient, IOptions<BaseLinkerOptions> options)
+    public InjectableBaseApiClient(HttpClient httpClient, IOptions<BaseLinkerOptions> options)
     {
         if (options.Value.Token == null) throw new ArgumentNullException(nameof(options.Value.Token));
         
@@ -22,7 +22,7 @@ internal class InjectableBaseLinkerApiClient : IBaseLinkerApiClient
             PermitLimit = options.Value.MaxRequestsPerMinute
         });
         
-        _client = new BaseLinkerApiClient(httpClient, options.Value.Token)
+        _client = new BaseApiClient(httpClient, options.Value.Token)
         {
             ThrowExceptions = options.Value.ThrowExceptions,
             UseRequestLimit = options.Value.UseRequestLimit,

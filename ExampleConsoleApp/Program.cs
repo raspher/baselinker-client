@@ -9,7 +9,7 @@ if (string.IsNullOrWhiteSpace(token))
 }
 
 using var httpClient = new HttpClient();
-var baseLinkerClient = new BaseLinkerApiClient(httpClient, token)
+var baseLinkerClient = new BaseApiClient(httpClient, token)
 {
     // Set this to false if you want to check success status manually, error-prone. If you forget to check you will get null reference exceptions.
     ThrowExceptions = true
@@ -22,7 +22,7 @@ try
         Console.WriteLine(courier.Code);
     }
 }
-catch (BaseLinkerException baseLinkerException)
+catch (BaseException baseLinkerException)
 {
     Console.WriteLine($"Error! {baseLinkerException.ErrorCode} - {baseLinkerException.ErrorMessage}");
 }
