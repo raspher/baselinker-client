@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net9.0;netstandard2.1</TargetFrameworks>
         <LangVersion>default</LangVersion>
         <Nullable>enable</Nullable>
         <AssemblyName>BaseLinker</AssemblyName>
@@ -13,6 +12,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageIconUrl>https://base.com/assets/images/favicons/base.com/apple-touch-icon-120x120.png</PackageIconUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <TargetFramework>net9.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
