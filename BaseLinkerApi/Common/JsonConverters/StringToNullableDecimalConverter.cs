@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace BaseLinkerApi.Common.JsonConverters;
 
-internal class StringToNullableDecimalConverter : JsonConverter<decimal?>
+public sealed class StringToNullableDecimalConverter : JsonConverter<decimal?>
 {
     public override decimal? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {

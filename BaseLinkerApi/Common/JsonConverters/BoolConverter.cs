@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace BaseLinkerApi.Common.JsonConverters;
 
-internal class BoolConverter : JsonConverter<bool>
+public sealed class BoolConverter : JsonConverter<bool>
 {
     public override bool Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
