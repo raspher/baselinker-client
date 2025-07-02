@@ -1,13 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>default</LangVersion>
         <Nullable>enable</Nullable>
-
         <AssemblyName>BaseLinker.Extensions.DependencyInjection</AssemblyName>
-
         <PackageId>BaseLinker.Extensions.DependencyInjection</PackageId>
         <Description>BaseLinker.com API client library (dependency injection extensions)</Description>
         <PackageVersion>0.2.6</PackageVersion>
@@ -16,6 +13,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageIconUrl>https://baselinker.com/assets/images/favicons/apple-icon-120x120.png</PackageIconUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <TargetFrameworks>net9.0;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>

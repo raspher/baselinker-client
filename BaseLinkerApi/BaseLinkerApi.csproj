@@ -1,12 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net9.0;netstandard2.1</TargetFrameworks>
+        <TargetFrameworks>net9.0;netstandard2.1</TargetFrameworks>
         <LangVersion>default</LangVersion>
-        <Nullable>annotations</Nullable>
-
+        <Nullable>enable</Nullable>
         <AssemblyName>BaseLinker</AssemblyName>
-        
         <PackageId>BaseLinker</PackageId>
         <Description>Base.com API client library</Description>
         <PackageVersion>0.5.2.1</PackageVersion>

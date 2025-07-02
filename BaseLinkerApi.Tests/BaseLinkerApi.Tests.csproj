@@ -1,9 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-
         <IsPackable>false</IsPackable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>default</LangVersion>
+        <Nullable>enable</Nullable>
+        <TargetFrameworks>net9.0;netstandard2.1</TargetFrameworks>
+        <OutputType>Library</OutputType>
     </PropertyGroup>
 
     <ItemGroup>
